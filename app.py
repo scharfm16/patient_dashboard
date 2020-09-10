@@ -18,10 +18,10 @@ def run_server(fig, port=8050):
 
 
     app.layout = html.Div(children=[
-    html.H1(children='Patient Dashboard'),
+    html.H1(children='GAD7 Results Patient Dashboard'),
 
     html.Div(children='''
-        A Dashboard for displaying patient GAD7 results over time.
+        When screening for anxiety disorders, a recommended threshold for further clinical evaluation is a score of 10 or greater. 
     '''),
 
     dcc.Graph(
@@ -31,3 +31,4 @@ def run_server(fig, port=8050):
     ])
     webbrowser.open_new("http://localhost:{}".format(port))
     app.run_server(debug=True,port=port)
+    
