@@ -1,6 +1,4 @@
-# -*- coding: utf-8 -*-
-
-# Run this app with `python app.py` and
+#Runs the server and opens the browser to view the dashboard
 
 import dash
 import dash_core_components as dcc
@@ -23,7 +21,7 @@ def run_server(fig, port=8050):
     html.H1(children='Patient Dashboard'),
 
     html.Div(children='''
-        A Dashboard for displaying patient GAD7 results over time
+        A Dashboard for displaying patient GAD7 results over time.
     '''),
 
     dcc.Graph(
@@ -31,6 +29,5 @@ def run_server(fig, port=8050):
         figure=fig
         )
     ])
-    
     webbrowser.open_new("http://localhost:{}".format(port))
     app.run_server(debug=True,port=port)
